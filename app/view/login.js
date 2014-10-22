@@ -3,12 +3,12 @@ Ext.define('Perpus.view.login',{
 	alias:'widget.login',
 	id	: 'login',
 	autoShow: true,
-	height: 170,
+	height: 130,
 	width: 360,
 	modal: true,
 	title: 'Login Form',
-	loyout: {
-		type:'fit'
+	layout: {
+		type:'form'
 	},
 	iconCls: 'icon-key',
 	title:"login",
@@ -21,7 +21,8 @@ Ext.define('Perpus.view.login',{
 			emptyText	: 'type username here',
 			name		: 'username',
 			msgTarget	: 'bottom',
-			allowBlank	: false
+			allowBlank	: false,
+			anchor		: '75%'
 		},
 		{
 			xtype	: 'textfield',
@@ -30,7 +31,8 @@ Ext.define('Perpus.view.login',{
 			emptyText	: 'type password here',
 			name		: 'password',
 			msgTarget	: 'bottom',
-			allowBlank	: false
+			allowBlank	: false,
+			anchor		: '75%'
 		}
 	],
 	buttons	:	[

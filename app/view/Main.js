@@ -11,16 +11,16 @@ Ext.define('Perpus.view.Main', {
         type: 'border'
     },
 
-    items: [{
-        region: 'west',
-        xtype: 'panel',
-        title: 'west',
-        width: 150
-    },{
-        region: 'center',
-        xtype: 'tabpanel',
-        items:[{
-            title: 'Center Tab 1'
-        }]
-    }]
+    // items: [{
+    //     region: 'west',
+    //     xtype: 'panel',
+    //     title: 'west',
+    //     width: 150
+    // },{
+    //     region: 'center',
+    //     xtype: 'tabpanel',
+    //     items:[{
+    //         title: 'Center Tab 1'
+    //     }]
+    // }]
 });

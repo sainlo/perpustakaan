@@ -9,5 +9,43 @@ Ext.application({
 
     extend: 'Perpus.Application',
     
-    autoCreateViewport: true
+    views: [
+    	'Main',
+    	'Viewport',
+    	'login'
+    ],
+
+    controllers: [
+    	'Main',
+    	'login'
+    ],
+
+    autoCreateViewport: true,
+    
+    init: function() {
+    	splashscreen = Ext.getBody().mask ('Loading application','splashscreen');
+    },
+
+    launch: function(){
+ 
+	    Ext.tip.QuickTipManager.init();
+	    var task = new Ext.util.DelayedTask(function(){
+	 
+	        // fade out the body mask
+	        splashscreen.fadeOut({
+	            duration: 1000,
+	            remove: true
+	        });
+	 
+	        // fade out the message
+	        splashscreen.next().fadeOut({
+	            duration: 1000,
+	            remove: true
+	        });
+	 
+	   });
+	 
+   		task.delay(1000);
+ 		Ext.widget('login');
+	}
 });
